@@ -1,0 +1,30 @@
+#loginContainer {
+    height: 100vh;
+    background: var(--blue-dark);
+    max-height: 100%;
+}
+
+.loginContainer {
+    max-width: 1700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.loginBanner {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    min-height: 450px;
+}
+
+.loginContainerForm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
