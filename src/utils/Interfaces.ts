@@ -6,7 +6,14 @@ interface Challenge {
     amount: number
 }
 
-export interface ProviderProps {
+export interface ProviderPropsChallenge {
+    children: ReactNode
+    level: number, 
+    currentExperience: number, 
+    challengesCompleted: number
+}
+
+export interface ProviderPropsCountdown {
     children: ReactNode
 }
 
@@ -20,6 +27,7 @@ export interface ChallengesContextData {
     resetChallenge,
     experienceToNextLevel: number,
     completeChallenge: () => void,
+    closeLevelUpModal: () => void
 }
 
 export interface CountdownContextData {
@@ -29,4 +37,10 @@ export interface CountdownContextData {
     isActice: boolean,
     startCountdown: () => void,
     resetCountdown: () => void
+}
+
+export interface HomeProps {
+    level: number, 
+    currentExperience: number, 
+    challengesCompleted: number
 }

@@ -5,9 +5,7 @@ import { Provider } from 'next-auth/client'
 function MyApp({ Component, pageProps }) {
   return (
     <Provider session={pageProps.session}>
-        <ChallengeProvider>
-          <Component {...pageProps} />
-      </ChallengeProvider>
+      <Component {...pageProps} />
     </Provider>
   )
 }

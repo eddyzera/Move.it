@@ -2,7 +2,7 @@ import { useSession, signIn, signOut } from 'next-auth/client'
 import style from '../styles/components/LoginForm.module.css'
 
 export default function LoginForm() {
-    const [session, loading] = useSession()
+    const [session] = useSession()
     return (
         <div id={style.loginForm}>
             {!session && (
@@ -13,9 +13,12 @@ export default function LoginForm() {
                   </button>
                 </div>
             )}
-            {loading && (
+            {session && (
                 <div>
-                  <h1>Carregando...</h1>
+                  <img src="favicon.png" alt=""/>
+                  <button onClick={(): Promise<void> => signOut()}>
+                    Sair
+                  </button>
                 </div>
             )}
         </div>
