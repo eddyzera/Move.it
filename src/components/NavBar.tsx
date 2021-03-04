@@ -1,5 +1,8 @@
 import style from '../styles/components/NavBar.module.css'
+import Link from 'next/link'
 import { IoMdExit } from "react-icons/io"
+import { RiHomeLine, RiMedal2Fill } from "react-icons/ri";
+
 import { useSession, signOut } from 'next-auth/client'
 
 export default function NavBar() {
@@ -18,6 +21,16 @@ export default function NavBar() {
                                     <IoMdExit size="2.5rem" />
                                 </button>
                             )}
+                        </li>
+                        <li>
+                            <Link href="/home">
+                                <RiHomeLine size="2.5rem" />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/ranked">
+                                <RiMedal2Fill size="2.5rem" />
+                            </Link>
                         </li>
                     </ul>
                 </nav>

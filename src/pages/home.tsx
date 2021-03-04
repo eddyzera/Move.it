@@ -8,10 +8,9 @@ import Head from 'next/head'
 import ChallengeBox from "../components/ChallengeBox";
 import ContdownProvider from "../context/CountdowContext";
 import { ChallengeProvider } from '../context/ChallengesContext';
-import { HomeProps } from '../utils/Interfaces';
 import NavBar from '../components/NavBar';
 
-export default function Home(props: HomeProps) {
+export default function Home(props) {
   return (
     <ChallengeProvider
       level={props.level}

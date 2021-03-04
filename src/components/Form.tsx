@@ -30,7 +30,7 @@ export default function Form() {
             )}
             {!session && (
                 <div className={style.google}>
-                  <button onClick={(): Promise<void> => signIn('google')}>
+                  <button onClick={(): Promise<void> => signIn('google', { callbackUrl: 'http://localhost:3000/home' })}>
                   <p>Google</p>
                   <FaGoogle color="#FFF" />
                   </button>
@@ -48,7 +48,7 @@ export default function Form() {
 
             {!session && (
                 <div className={style.twitter}>
-                  <button onClick={(): Promise<void> => signIn('twitter')}>
+                  <button onClick={(): Promise<void> => signIn('twitter', { callbackUrl: 'http://localhost:3000/home' })}>
                   <p>Twitter</p>
                   <FaTwitter color="#FFF" />
                   </button>
