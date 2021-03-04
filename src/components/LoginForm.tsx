@@ -1,26 +1,20 @@
-import { useSession, signIn, signOut } from 'next-auth/client'
-import style from '../styles/components/LoginForm.module.css'
+import { useContext } from 'react'
+import { LoginContext } from '../context/LoginContext'
 
-export default function LoginForm() {
-    const [session] = useSession()
+export default function LoginForm () {
+
+    const { OpenForm } = useContext(LoginContext)
+
     return (
-        <div id={style.loginForm}>
-            {!session && (
-                <div>
-                  <img src="favicon.png" alt=""/>
-                  <button onClick={(): Promise<void> => signIn('facebook', {callbackUrl: 'http://localhost:3000/home'})}>
-                    Entrar
-                  </button>
-                </div>
-            )}
-            {session && (
-                <div>
-                  <img src="favicon.png" alt=""/>
-                  <button onClick={(): Promise<void> => signOut()}>
-                    Sair
-                  </button>
-                </div>
-            )}
-        </div>
+        <>
+            <img src="Logo.png" alt="" />
+            <div>
+                <h1>Bem-vindo</h1>
+                    <h3>Faça seu login usando a sua conta das suas redes sociais preferidas</h3>
+                    <button type="button" onClick={OpenForm} >
+                        <img src="icons/arrow.svg" alt=""/>
+                    </button>
+            </div>
+        </>
     )
 }

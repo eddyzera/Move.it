@@ -1,11 +1,10 @@
 #loginContainer {
     height: 100vh;
-    background: var(--blue-dark);
+    background: var(--blue);
     max-height: 100%;
 }
 
 .loginContainer {
-    max-width: 1700px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -24,7 +23,37 @@
 .loginContainerForm {
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+.loginContainerForm div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 670px;
+}
+
+.loginContainerForm div h1 {
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.loginContainerForm div h3 {
+    color: #B2B9FF;
+    margin: 30px 0;
+    max-width: 461px;
+}
+
+.loginContainerForm div button {
+    width: 100px;
+    height: 100px;
+    background: var(--blue-dark);
+    border: none;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    font-size: 0;
 }

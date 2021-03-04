@@ -17,6 +17,10 @@ export interface ProviderPropsCountdown {
     children: ReactNode
 }
 
+export interface ProviderPropsLogin {
+    children: ReactNode
+}
+
 export interface ChallengesContextData {
     level: number,
     levelUp: () => void;
@@ -39,8 +43,8 @@ export interface CountdownContextData {
     resetCountdown: () => void
 }
 
-export interface HomeProps {
-    level: number, 
-    currentExperience: number, 
-    challengesCompleted: number
+
+export interface LoginContextData {
+    OpenForm: () => void,
+    closeForm: () => void
 }

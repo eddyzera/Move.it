@@ -9,6 +9,7 @@ import ChallengeBox from "../components/ChallengeBox";
 import ContdownProvider from "../context/CountdowContext";
 import { ChallengeProvider } from '../context/ChallengesContext';
 import { HomeProps } from '../utils/Interfaces';
+import NavBar from '../components/NavBar';
 
 export default function Home(props: HomeProps) {
   return (
@@ -17,24 +18,27 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-        <div className={styles.container}>
-          <Head>
-            <title>Home</title>
-          </Head>
-          <ExperienceBar />
-          <ContdownProvider>
-            <section>
-              <div>
-                <Profile />
-                <CompletedChallanges />
-                <Countdown />
-              </div>
-              <div>
-                <ChallengeBox />
-              </div>
-            </section>
-          </ContdownProvider>
-        </div>
+      <div className={styles.containerFlex}>
+        <NavBar />
+          <div className={styles.container}>
+            <Head>
+              <title>Home</title>
+            </Head>
+            <ExperienceBar />
+            <ContdownProvider>
+              <section>
+                <div>
+                  <Profile />
+                  <CompletedChallanges />
+                  <Countdown />
+                </div>
+                <div>
+                  <ChallengeBox />
+                </div>
+              </section>
+            </ContdownProvider>
+          </div>
+      </div>
     </ChallengeProvider>
   )
 }

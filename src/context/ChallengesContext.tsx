@@ -15,7 +15,6 @@ export function ChallengeProvider ({ children, ...rest }: ProviderPropsChallenge
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
     const [isLevelUp, setIslevelUp] = useState(false)
 
-
     useEffect(() => {
         Notification.requestPermission()
     }, [])    
@@ -83,7 +82,7 @@ export function ChallengeProvider ({ children, ...rest }: ProviderPropsChallenge
         resetChallenge,
         experienceToNextLevel,
         completeChallenge,
-        closeLevelUpModal
+        closeLevelUpModal,
     }
 
     function resetChallenge() {
