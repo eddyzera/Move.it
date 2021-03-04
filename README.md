@@ -22,7 +22,7 @@ Abrir [http://localhost:3000](http://localhost:3000) em seu navegador.
 
 - Typescript
 
-- NextAuth.js - utilizando autenticação de login do Facebook
+- NextAuth.js - utilizando autenticação de login do Facebook, Google, Twitter e Github
 
 
 ## Contato
